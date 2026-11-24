@@ -1,4 +1,4 @@
-# The Sea Life
+# The sea life
 
 基于 **7-Zip 26.06** 与 **Dark7zip** 的 Windows 定制发行版：12 种压缩格式使用 Zabriskije 绘制的 Keka 风格图标，保留深色主题与 .iso 装载能力。
 
