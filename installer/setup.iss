@@ -1,4 +1,4 @@
-#define AppName "The Sea Life"
+#define AppName "The sea life"
 #define AppVersion "26.06"
 #define AppPublisher "Personal custom build"
 #define AppExeName "7zFM.exe"
