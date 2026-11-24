@@ -5,7 +5,7 @@
 [CmdletBinding()]
 param(
     [string]$Source = 'D:/app/Dark7-Zip',
-    [string]$Name   = 'The-Sea-Life'
+    [string]$Name   = 'The sea life'
 )
 
 $ErrorActionPreference = 'Stop'
