@@ -1,10 +1,10 @@
 <#
 .SYNOPSIS
-    The Sea Life - Register file associations and icons for 12 archive formats (HKCU only, no admin).
+    The sea life - Register file associations and icons for 12 archive formats (HKCU only, no admin).
 .DESCRIPTION
     Writes HKCU directly through the .NET registry API so PS 5.1 and PS 7 behave
     identically. Original values are backed up to
-    %LOCALAPPDATA%\The Sea Life\associations-backup.json before any change.
+    %LOCALAPPDATA%\The sea life\associations-backup.json before any change.
 #>
 [CmdletBinding()]
 param(
@@ -103,9 +103,9 @@ foreach ($ext in $map.Keys) {
         shellTypes  = $shellTypes
     }
 
-    Set-RegValue $progSub '' ("The Sea Life archive - " + $ext)
+    Set-RegValue $progSub '' ("The sea life archive - " + $ext)
     Set-RegValue "$progSub\DefaultIcon" '' ('"' + $icon + '",0')
-    Set-RegValue "$progSub\shell\open" 'MUIVerb' 'Open with The Sea Life'
+    Set-RegValue "$progSub\shell\open" 'MUIVerb' 'Open with The sea life'
     Set-RegValue "$progSub\shell\open\command" '' ('"' + $exe + '" "%1"')
     Set-RegValue "$progSub\shell\myzip_extract_here" 'MUIVerb' 'Extract here...'
     Set-RegValue "$progSub\shell\myzip_extract_here\command" '' ('"' + $exe + '" "%1"')
@@ -128,7 +128,7 @@ if (-not $NoIsoMount) {
 }
 
 if (-not $NoBackup) {
-    $backupDir = Join-Path $env:LOCALAPPDATA 'The Sea Life'
+    $backupDir = Join-Path $env:LOCALAPPDATA 'The sea life'
     New-Item -ItemType Directory -Path $backupDir -Force | Out-Null
     $backupPath = Join-Path $backupDir 'associations-backup.json'
     ($backup | ConvertTo-Json -Depth 8) | Set-Content -LiteralPath $backupPath -Encoding UTF8
