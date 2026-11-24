@@ -1,0 +1,6 @@
+releases/
+build/staging/
+*.zip
+*.exe
+Thumbs.db
+desktop.ini
