@@ -1,13 +1,13 @@
 <#
 .SYNOPSIS
-    The Sea Life - Restore the original file associations and icons (HKCU only).
+    The sea life - Restore the original file associations and icons (HKCU only).
 #>
 [CmdletBinding()]
 param([string]$Root = $PSScriptRoot)
 
 $ErrorActionPreference = 'Stop'
 $HKCU = [Microsoft.Win32.Registry]::CurrentUser
-$backupPath = Join-Path $env:LOCALAPPDATA 'The Sea Life\associations-backup.json'
+$backupPath = Join-Path $env:LOCALAPPDATA 'The sea life\associations-backup.json'
 
 function Set-RegValue {
     param([string]$SubKey, [string]$Name, [string]$Value)
